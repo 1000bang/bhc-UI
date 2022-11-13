@@ -3,6 +3,7 @@ import 'package:bhc/pages/event_page.dart';
 import 'package:flutter/material.dart';
 
 import '../components/bottom_navi.dart';
+import '../components/drawer.dart';
 import '../components/menu_item.dart';
 
 class MenuPage extends StatelessWidget {
@@ -11,6 +12,7 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MainDrawer(),
       appBar: _bulidBhcAppBar(context),
       bottomNavigationBar: BottomNavi(),
       body: SafeArea(
@@ -66,12 +68,9 @@ Widget _buildMenu(imageName, foodName, price) {
 
 AppBar _bulidBhcAppBar(context) {
   return AppBar(
+    iconTheme: IconThemeData(color: Colors.black87),
     backgroundColor: Colors.white,
     toolbarHeight: 50,
-    leading: IconButton(
-      icon: Icon(Icons.menu, color: Colors.black87),
-      onPressed: () {},
-    ),
     actions: [
       Row(
         children: [

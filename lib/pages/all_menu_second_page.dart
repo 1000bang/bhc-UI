@@ -1,6 +1,8 @@
 import 'package:bhc/components/bottom_navi.dart';
 import 'package:flutter/material.dart';
 
+import '../components/drawer.dart';
+
 class AllMenuSecondPage extends StatelessWidget {
   const AllMenuSecondPage({Key? key}) : super(key: key);
 
@@ -8,6 +10,7 @@ class AllMenuSecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
+        drawer: MainDrawer(),
         backgroundColor: Colors.white,
         appBar: _bulidBhcAppBar(context),
         body: ListView(
@@ -26,12 +29,9 @@ class AllMenuSecondPage extends StatelessWidget {
 
   AppBar _bulidBhcAppBar(context) {
     return AppBar(
+      iconTheme: IconThemeData(color: Colors.black87),
       backgroundColor: Colors.white,
       toolbarHeight: 50,
-      leading: IconButton(
-        icon: Icon(Icons.menu, color: Colors.black87),
-        onPressed: () {},
-      ),
       actions: [
         Row(
           children: [

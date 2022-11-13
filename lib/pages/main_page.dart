@@ -1,3 +1,4 @@
+import 'package:bhc/components/drawer.dart';
 import 'package:flutter/material.dart';
 
 import '../components/bottom_navi.dart';
@@ -10,6 +11,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
+        drawer: MainDrawer(),
         backgroundColor: Colors.white,
         appBar: _bulidBhcAppBar(),
         body: ListView(
@@ -147,12 +149,9 @@ class MainPage extends StatelessWidget {
 
   AppBar _bulidBhcAppBar() {
     return AppBar(
+      iconTheme: IconThemeData(color: Colors.black87),
       backgroundColor: Colors.white,
       toolbarHeight: 50,
-      leading: IconButton(
-        icon: Icon(Icons.menu, color: Colors.black87),
-        onPressed: () {},
-      ), 
         title: Image.asset('bhcLogo.png', width: 60, height: 50,),
       centerTitle: true,
       actions: [

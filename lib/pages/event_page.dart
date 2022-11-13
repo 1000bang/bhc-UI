@@ -2,7 +2,7 @@ import 'package:bhc/constants.dart';
 import 'package:bhc/components/event_compo.dart';
 import 'package:flutter/material.dart';
 import '../components/bottom_navi.dart';
-import '../drawer.dart';
+import '../components/drawer.dart';
 
 class EventPage extends StatelessWidget {
   const EventPage({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class EventPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // endDrawer: ProfileDrawer(),
+      drawer: MainDrawer(),
       appBar: _bulidBhcAppBar(),
       bottomNavigationBar: BottomNavi(),
       body: SafeArea(
@@ -108,12 +108,10 @@ class _EventTabState extends State<EventTab>
 
 AppBar _bulidBhcAppBar() {
   return AppBar(
+    iconTheme: IconThemeData(color: Colors.black87),
     backgroundColor: Colors.white,
     toolbarHeight: 50,
-    leading: IconButton(
-      icon: Icon(Icons.menu, color: Colors.black87),
-      onPressed: () {},
-    ),
+
     title: Text(
       "이벤트",
       style: TextStyle(color: Colors.black87),

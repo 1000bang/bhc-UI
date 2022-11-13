@@ -18,8 +18,6 @@ class ProfileDrawer extends StatelessWidget {
             Text("이벤트" , style: TextStyle(color: Colors.white, height: 5),),
             Text("주문내역 확인 " , style: TextStyle(color: Colors.white, height: 5),),
             Text("FAQ" , style: TextStyle(color: Colors.white, height: 5),)
-
-
           ],
         ),
       ),

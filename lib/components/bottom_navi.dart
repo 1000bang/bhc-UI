@@ -1,7 +1,7 @@
-import 'package:bhc/event_page.dart';
+import 'package:bhc/pages/event_page.dart';
 import 'package:flutter/material.dart';
 
-import '../main_page.dart';
+import '../pages/main_page.dart';
 
 class BottomNavi extends StatelessWidget {
   const BottomNavi({Key? key}) : super(key: key);
@@ -23,8 +23,11 @@ class BottomNavi extends StatelessWidget {
   }
 
   Widget _buildSelectorButton(
-      BuildContext context, int id, IconData mIcon, String name) {
-
+    BuildContext context,
+    int id,
+    IconData mIcon,
+    String name,
+  ) {
     return Container(
       width: 70,
       height: 70,
@@ -32,16 +35,13 @@ class BottomNavi extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-
-                if (id == 4) {
-                  Navigator.popAndPushNamed(context, "/event");
-                } else if (id == 0) {
-                  Navigator.popAndPushNamed(context, "/home");
-                } else if (id == 1) {
-                  Navigator.popAndPushNamed(context, "/menu");
-                }
-
-
+              if (id == 4) {
+                Navigator.popAndPushNamed(context, "/event");
+              } else if (id == 0) {
+                Navigator.popAndPushNamed(context, "/home");
+              } else if (id == 1) {
+                Navigator.popAndPushNamed(context, "/menu");
+              }
             },
             icon: Icon(
               mIcon,

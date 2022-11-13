@@ -1,8 +1,9 @@
-import 'package:bhc/all_menu_page.dart';
+import 'package:bhc/pages/all_menu_page.dart';
+import 'package:bhc/pages/all_menu_second_page.dart';
 import 'package:flutter/material.dart';
-import 'package:bhc/event_page.dart';
+import 'package:bhc/pages/event_page.dart';
 
-import 'main_page.dart';
+import 'pages/main_page.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -20,8 +21,8 @@ class MyApp extends StatelessWidget {
     routes: {
       "/home": (context) => MainPage(),
       "/event": (context) => EventPage(),
-      "/menu": (context) => MenuPage(),
-
+      "/menu": (context) => AllMenuSecondPage(),
+      "/secondMenu": (context) => MenuPage()
     }
     );
   }

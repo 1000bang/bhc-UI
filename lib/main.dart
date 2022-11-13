@@ -1,5 +1,7 @@
 import 'package:bhc/pages/all_menu_page.dart';
 import 'package:bhc/pages/all_menu_second_page.dart';
+import 'package:bhc/pages/find_store_page.dart';
+import 'package:bhc/pages/voucher_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bhc/pages/event_page.dart';
 
@@ -22,7 +24,10 @@ class MyApp extends StatelessWidget {
       "/home": (context) => MainPage(),
       "/event": (context) => EventPage(),
       "/menu": (context) => AllMenuSecondPage(),
-      "/secondMenu": (context) => MenuPage()
+      "/secondMenu": (context) => MenuPage(),
+      "/voucher": (context) => VoucherPage(),
+      "/findstore": (context) => FindStorePage(),
+
     }
     );
   }

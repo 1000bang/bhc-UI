@@ -41,6 +41,10 @@ class BottomNavi extends StatelessWidget {
                 Navigator.popAndPushNamed(context, "/home");
               } else if (id == 1) {
                 Navigator.popAndPushNamed(context, "/menu");
+              }else if (id == 3) {
+                Navigator.popAndPushNamed(context, "/voucher");
+              }else if (id == 2) {
+                Navigator.popAndPushNamed(context, "/findstore");
               }
             },
             icon: Icon(

@@ -1,6 +1,7 @@
 import 'package:bhc/pages/all_menu_page.dart';
 import 'package:bhc/pages/all_menu_second_page.dart';
 import 'package:bhc/pages/find_store_page.dart';
+import 'package:bhc/pages/splash_screen.dart';
 import 'package:bhc/pages/voucher_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bhc/pages/event_page.dart';
@@ -17,10 +18,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  MainPage(),
+      home:  SplashScreen(),
 
-    initialRoute: "/home",
+    initialRoute: "/splash",
     routes: {
+      "/splash": (context) => SplashScreen(),
       "/home": (context) => MainPage(),
       "/event": (context) => EventPage(),
       "/menu": (context) => AllMenuSecondPage(),
